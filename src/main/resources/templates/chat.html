@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="h-100" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="common/header :: head_fragment(title=チャットレビュー)"></head>
+
+<body class="h-100 overflow-hidden">
+    <div class="row h-100 justify-content-center align-items-center">
+        <!-- 中央配置 -->
+        <div class="mt-3 h-100 col-sm-10">
+            <!-- コンテンツ -->
+            <div class="container-fluid p-0">
+                <h1 class="h3 mb-3">チャット レビュー</h1>
+
+                <div class="row justify-content-center">
+                    <!-- 中央配置 -->
+                    <div class="col-xl-11">
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-striped w-100">
+                                    <thead>
+                                        <tr>
+                                            <th>タイトル</th>
+                                            <th>著者</th>
+                                            <th>出版社</th>
+                                            <th>出版年</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <td class="align-middle" th:text="${bookData.title}"></td>
+                                        <td class="align-middle" th:text="${bookData.author}"></td>
+                                        <td class="align-middle" th:text="${bookData.publisher}"></td>
+                                        <td class="align-middle" th:text="${bookData.yearAndMonth}"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- チャット部分 -->
+                <div class="row justify-content-center mt-3">
+                    <!-- 中央配置 -->
+                    <div class="col-xl-11">
+                        <div class="card">
+                            <div class="card-body">
+                                <div th:each="chat:${chatList}">
+                                    <div class="row justify-content-end mb-2">
+                                        <div class="col-auto">
+
+                                            <div class="text-right rounded px-3 py-2 mb-2 bg-primary text-white">
+                                                <p th:text="${chat.chat}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- チャットフォーム -->
+                                <div class="row mt-3">
+                                    <div class="col">
+                                        <form th:action="@{/send}" method="post">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="メッセージを入力してください"
+                                                    name="chat">
+                                                <div class="input-group-append">
+                                                    <button type="submit" class="btn btn-primary">送信</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
