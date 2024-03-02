@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hayate.imajo.service.BookService;
 import com.hayate.imajo.service.ChatService;
@@ -33,12 +34,13 @@ public class ChatController {
     }
 
     // チャット送信
-    @PostMapping("/send")
-    public String sendChat(Model model) {
-        
-        
-        
-        return "redirect:/chat";
+    @PostMapping("/{isbn}/send")
+    public String sendChat(@RequestParam("chat") String chat, @PathVariable("isbn") String isbn, Model model) {
+        chatService.save(chat);
+        model.addAttribute("bookData", bookService.findByIsbn(isbn));
+        model.addAttribute("chatList", chatService.findALL());
+
+        return "redirect:/{isbn}";
     }
 
 }

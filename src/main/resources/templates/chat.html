@@ -58,7 +58,7 @@
                                 <!-- チャットフォーム -->
                                 <div class="row mt-3">
                                     <div class="col">
-                                        <form th:action="@{/send}" method="post">
+                                        <form th:action="@{/{isbn}/send(isbn=${bookData.isbn})}" method="post">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" placeholder="メッセージを入力してください"
                                                     name="chat">
