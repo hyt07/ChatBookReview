@@ -15,7 +15,7 @@ public class BookData {
     private String isbn;
 
     // タイトル
-    private String title;
+    private String bookTitle;
 
     // 著者
     private String author;
