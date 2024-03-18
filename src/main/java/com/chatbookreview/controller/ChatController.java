@@ -1,4 +1,4 @@
-package com.hayate.imajo.controller;
+package com.chatbookreview.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.hayate.imajo.service.BookService;
-import com.hayate.imajo.service.ChatService;
+import com.chatbookreview.service.BookService;
+import com.chatbookreview.service.ChatService;
 
 @Controller
 public class ChatController {

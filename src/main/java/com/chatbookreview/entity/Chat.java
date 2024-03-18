@@ -1,4 +1,4 @@
-package com.hayate.imajo.entity;
+package com.chatbookreview.entity;
 
 import java.time.LocalDateTime;
 

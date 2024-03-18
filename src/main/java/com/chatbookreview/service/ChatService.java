@@ -1,12 +1,12 @@
-package com.hayate.imajo.service;
+package com.chatbookreview.service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.hayate.imajo.entity.Chat;
-import com.hayate.imajo.repository.ChatRepository;
+import com.chatbookreview.entity.Chat;
+import com.chatbookreview.repository.ChatRepository;
 
 @Service
 public class ChatService {

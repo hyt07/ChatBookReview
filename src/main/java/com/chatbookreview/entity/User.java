@@ -1,4 +1,4 @@
-package com.hayate.imajo.entity;
+package com.chatbookreview.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

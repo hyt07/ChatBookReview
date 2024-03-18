@@ -1,4 +1,4 @@
-package com.hayate.imajo.service;
+package com.chatbookreview.service;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.hayate.imajo.entity.User;
-import com.hayate.imajo.repository.UserRepository;
+import com.chatbookreview.entity.User;
+import com.chatbookreview.repository.UserRepository;
 
 @Service
 public class UserDetailService implements UserDetailsService {

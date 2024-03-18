@@ -1,11 +1,11 @@
-package com.hayate.imajo.controller;
+package com.chatbookreview.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.hayate.imajo.service.BookService;
+import com.chatbookreview.service.BookService;
 
 @Controller
 @RequestMapping("chatbookreview")

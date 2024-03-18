@@ -1,11 +1,11 @@
-package com.hayate.imajo.service;
+package com.chatbookreview.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.hayate.imajo.entity.User;
-import com.hayate.imajo.repository.UserRepository;
+import com.chatbookreview.entity.User;
+import com.chatbookreview.repository.UserRepository;
 
 @Service
 public class UserService {

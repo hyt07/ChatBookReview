@@ -1,8 +1,8 @@
-package com.hayate.imajo.repository;
+package com.chatbookreview.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.hayate.imajo.entity.Chat;
+import com.chatbookreview.entity.Chat;
 
 public interface ChatRepository extends JpaRepository<Chat, Integer> {
 

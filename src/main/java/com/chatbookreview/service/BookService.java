@@ -1,4 +1,4 @@
-package com.hayate.imajo.service;
+package com.chatbookreview.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hayate.imajo.entity.BookData;
-import com.hayate.imajo.repository.BookRepository;
+import com.chatbookreview.entity.BookData;
+import com.chatbookreview.repository.BookRepository;
 
 @Service
 public class BookService {
