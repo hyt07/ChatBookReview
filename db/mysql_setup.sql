@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS chat_book_review CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+CREATE USER IF NOT EXISTS 'cbruser'@'%' IDENTIFIED BY 'cbrpass';
+GRANT ALL PRIVILEGES ON *.* TO 'cbruser'@'%';
